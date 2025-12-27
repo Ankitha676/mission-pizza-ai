@@ -12,6 +12,11 @@ Track orders using an order ID
 
 Coordinate delivery scheduling via agent-to-agent (A2A) communication
 
+
+Detailed project explained video:
+
+https://drive.google.com/file/d/1E2_ToSHn-ytA-9UIBOjYmUt3__EQXp7-/view?usp=drive_link
+
 OpenAPI Specification
 
 The project uses an OpenAPI 3.0 specification located at:
@@ -88,6 +93,7 @@ Setup Instructions
 	python main.py
 	
 	Always run main.py to start the chatbot
+	
 
 Conclusion
 
