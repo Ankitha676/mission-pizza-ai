@@ -1,0 +1,49 @@
+{
+  "openapi": "3.0.0",
+  "info": {
+    "title": "Pizza API",
+    "version": "1.0.0"
+  },
+  "paths": {
+    "/menu": {
+      "get": {
+        "summary": "Get available pizzas and toppings",
+        "responses": {
+          "200": {
+            "description": "Menu retrieved"
+          }
+        }
+      }
+    },
+    "/order": {
+      "post": {
+        "summary": "Place a pizza order",
+        "requestBody": {
+          "required": true,
+          "content": {
+            "application/json": {
+              "schema": {
+                "type": "object",
+                "properties": {
+                  "pizza": { "type": "string" },
+                  "toppings": { "type": "array", "items": { "type": "string" } }
+                },
+                "required": ["pizza"]
+              }
+            }
+          }
+        },
+        "responses": { "200": { "description": "Order placed" } }
+      }
+    },
+    "/order/{id}": {
+      "get": {
+        "summary": "Track order status",
+        "parameters": [
+          { "name": "id", "in": "path", "required": true, "schema": { "type": "string" } }
+        ],
+        "responses": { "200": { "description": "Order status" } }
+      }
+    }
+  }
+}
